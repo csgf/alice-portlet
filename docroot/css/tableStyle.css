@@ -1,0 +1,13 @@
+.tableAnalysis  {
+border: solid 1px #000000;
+text-align: center;
+background: #F5F5F5;
+width:100%;
+}
+.tableAnalysis td {
+
+color: Black;
+padding: 8px;
+
+
+}

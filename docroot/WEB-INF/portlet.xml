@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<portlet-app xmlns='http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd' version='2.0'>
+	<portlet>
+		<description>alice_portlet</description>
+		<portlet-name>alice_portlet</portlet-name>
+		<display-name>alice_portlet</display-name>
+		<portlet-class>it.infn.ct.alice_portlet</portlet-class>
+                
+                
+                 <init-param>
+                        <name>GridOperation</name>
+                        <value>174</value>
+                </init-param>
+                <init-param>
+                        <name>AliceGroupName</name>
+                        <value>aliceuser</value>
+                </init-param>
+                <init-param>
+                        <name>CAPath</name>
+                        <value>/etc/grid-security/certificates</value>
+                </init-param>
+                
+                <!-- eTokenserver settings (begin) -->
+                <init-param>
+                        <name>eTokenHost</name>
+                        <value>etokenserver2.ct.infn.it</value>
+                </init-param>
+                <init-param>
+                        <name>eTokenPort</name>
+                        <value>8082</value>
+                </init-param>
+                <init-param>
+                        <name>eTokenMd5Sum</name>
+                        <value>bc681e2bd4c3ace2a4c54907ea0c379b</value>
+                </init-param>
+                <init-param>
+                        <name>eTokenVO</name>
+                        <value>vo.chain-project.eu</value>
+                </init-param>
+                <init-param>
+                        <name>eTokenVOGroup</name>
+                        <value>vo.chain-project.eu</value>
+                </init-param>
+                <init-param>
+                        <name>eTokenProxyRenewal</name>
+                        <value>true</value>
+                </init-param>
+                <!-- eTokenserver settings (end)   -->
+                <!-- Guacamole (start) -->
+                <init-param>
+                        <name>guacamole_page</name>
+                        <value>guacamole</value>
+                        <!--
+                            <value>guacamole-0.9.1</value>
+                        -->
+                </init-param> 
+                <init-param>
+                        <name>guacamole_dir</name>
+                        
+                        <value>/home/liferayadmin/.guacamole</value>
+                        
+                        <!--
+                        <value>/home/adminuser/.guacamole</value>
+                        -->
+                </init-param>
+                <init-param>
+                        <name>guacamole_noauthxml</name>
+                        <value>noauth-config.xml</value>
+                </init-param> 
+                <!-- Guacamole (end) -->
+                <init-param>
+                        <name>ProxyFile</name>
+                        <value>/tmp/alice.pxy</value>
+                </init-param>
+                <init-param>
+                	<name>portalSSHKey</name>
+                	<value>/home/liferayadmin/.ssh/id_rsa.pub</value> 
+                	<!--<value>/Users/grid/.ssh/id_rsa.pub</value> -->
+			<!--<value>/home/adminuser/.ssh/id_rsa.pub</value>
+			-->
+                </init-param>
+                
+                
+                 <!-- iservices settings (begin) -->
+                <init-param>
+                	<name>iservices_dbname</name>
+                	<value>iservices</value>
+                </init-param>
+                <init-param>
+                        <name>iservices_dbhost</name>
+                        <value>localhost</value>
+                        <!--<value>gridsrv-03.roma3.infn.it</value> in produzione su liferay2-->
+                </init-param>
+                <init-param>
+                        <name>iservices_dbport</name>
+                        <value>3306</value>
+                </init-param>
+                <init-param>
+                        <name>iservices_dbuser</name>
+                        <value>iservices_user</value>
+                </init-param>
+                <init-param>
+                        <name>iservices_dbpass</name>
+                        <value>iservices_password</value>
+                </init-param>
+                <init-param>
+                        <name>iservices_srvname</name>
+                        <value>ALICE</value>
+                </init-param>
+                <!-- iservices settings (end) -->
+                
+                
+                <!-- cloudprovider settings (begin) -->
+                <init-param>
+                        <name>cloudprovider_dbname</name>
+                        <value>cloudprovider</value>
+                </init-param>
+                <init-param>
+                        <name>cloudprovider_dbhost</name>
+                        <value>localhost</value>
+                        <!--<value>gridsrv-03.roma3.infn.it</value> in produzione su liferay2-->
+                </init-param>
+                <init-param>
+                        <name>cloudprovider_dbport</name>
+                        <value>3306</value>
+                </init-param>
+                <init-param>
+                        <name>cloudprovider_dbuser</name>
+                        <value>cloudprovider</value>
+                </init-param>
+                <init-param>
+                        <name>cloudprovider_dbpass</name>
+                        <value>cloudprovider_password</value>
+                </init-param>
+                <init-param>
+                        <name>CloudMgr</name>
+                        <!--<value>http://90.147.74.95:8081</value> -->
+                        <value>https://jessica.trigrid.it:8081/portal</value>
+                </init-param>
+                <!-- cloudprovider settings (end) -->
+                
+                
+                
+                
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+			<portlet-mode>EDIT</portlet-mode>
+			<portlet-mode>HELP</portlet-mode>
+		</supports>
+		<resource-bundle>it.infn.ct.messages</resource-bundle>
+		<portlet-info>
+			<title>alice_portlet</title>
+			<short-title>alice_portlet</short-title>
+		</portlet-info>
+	</portlet>
+</portlet-app>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 6.1.0//EN"
+"http://www.liferay.com/dtd/liferay-friendly-url-routes_6_1_0.dtd">
+
+<routes>
+    <route>
+        <!--
+            Defined friendly URL mapping will be:
+            http://<host>:<port>/web/guest/<portlet_page_name>/-/aleph/json?command=...
+        -->
+        <pattern>/json</pattern>
+        <implicit-parameter name="p_p_id">alice_portlet_WAR_aliceportlet</implicit-parameter>
+        <implicit-parameter name="p_p_lifecycle">2</implicit-parameter>
+        <implicit-parameter name="p_p_state">normal</implicit-parameter>
+        <implicit-parameter name="p_p_mode">view</implicit-parameter>
+        <implicit-parameter name="p_p_resource_id">view.jsp</implicit-parameter>
+        <implicit-parameter name="p_p_cacheability">cacheLevelPage</implicit-parameter>
+        <implicit-parameter name="p_p_col_id">column-1</implicit-parameter>
+        <implicit-parameter name="p_p_col_count">1</implicit-parameter>
+    </route>
+</routes>
