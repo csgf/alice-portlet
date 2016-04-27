@@ -54,7 +54,7 @@ Pressing the 'Start VM' button, a new virtual machine will be started and associ
 
 Once available the VM, two image buttons representing a console and the VNC logo inside a monitor, allow respectively to connect the VM to an SSH console or into a VNC session from the portal. In any case the information about how to connect the VM will be sent to the suer via email including the necessary credentials.
 
-.. image:: images/pane2_2_2.png
+.. image:: images/pane_2_2.png
 
 ============
 Contributor(s)
